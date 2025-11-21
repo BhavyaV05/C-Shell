@@ -1,0 +1,15 @@
+# Object files
+*.o
+
+# Executables
+*.out
+*.exe
+
+# Build artifacts
+shell/shell.out
+shell/*.o
+
+# Temporary files
+*.tmp
+*~
+.DS_Store
