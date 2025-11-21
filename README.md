@@ -434,7 +434,7 @@ Sent signal 19 to process with pid 12345
 <user@host:~> cat data.txt | grep "important" | sort | uniq > results.txt
 <user@host:~> reveal -la /etc | grep ".conf" | wc -l
 42
-<user@host:~> ps aux | grep myprocess | awk '{print $2}' | xargs ping 9
+<user@host:~> ps aux | grep myprocess | awk '{print $2}' | xargs -I {} ping {} 9
 ```
 
 ### Command Chaining
@@ -444,7 +444,7 @@ Sent signal 19 to process with pid 12345
 
 ### Mixed Operations
 ```bash
-<user@host:~> (sleep 5 ; echo "Finished") &
+<user@host:~> sleep 5 &
 [1] 12347
 <user@host:~> find . -name "*.c" > c_files.txt &
 [2] 12348
